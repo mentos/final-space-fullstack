@@ -35,10 +35,25 @@ type FinalSpaceApiCharacter = {
   status: string;
 };
 
+type PaginatedEpisodePreviews = {
+  items: EpisodePreview[];
+  error: string | null;
+  meta: { pagination: Pagination };
+};
+
+type Pagination = {
+  page: number;
+  perPage: number;
+  total: number;
+  totalPages: number;
+};
+
 export {
   EpisodePreview,
   EpisodePreviewCharacter,
   EpisodePreviewCharactersDictionary,
   FinalSpaceApiCharacter,
   FinalSpaceApiEpisode,
+  PaginatedEpisodePreviews,
+  Pagination,
 };
