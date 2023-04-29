@@ -61,7 +61,7 @@ const Index: React.FC = () => {
         <div className="flex flex-col">
           <Pagination
             className="flex items-center justify-center mb-10"
-            currentPage={+(router.query?.page || 1)}
+            currentPage={page}
             onPageChange={(index) => shallowPush(index + 1, perPage)}
             totalPages={data?.meta.pagination.totalPages ?? 0}
           />
