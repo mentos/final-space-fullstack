@@ -29,11 +29,11 @@ const Pagination: React.FC<Props> = ({
 
   return (
     <ReactPaginate
-      initialPage={currentPage - 1}
       activeClassName="bg-slate-900 text-white"
       breakLabel={<span className="mr-4">...</span>}
       containerClassName={className}
       disableInitialCallback
+      forcePage={currentPage - 1}
       nextLabel={showNextButton && <NavArrow>▶</NavArrow>}
       onPageChange={({ selected }) => onPageChange(selected)}
       pageClassName="block border- border-solid border-lightGray hover:bg-lightGray w-10 h-10 flex items-center justify-center rounded-md mr-4"
