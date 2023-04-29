@@ -41,6 +41,8 @@ type PaginatedEpisodePreviews = {
   meta: { pagination: Pagination };
 };
 
+type ResponseErrorWithMessage = { message: string } | undefined;
+
 type Pagination = {
   page: number;
   perPage: number;
@@ -56,4 +58,5 @@ export {
   FinalSpaceApiEpisode,
   PaginatedEpisodePreviews,
   Pagination,
+  ResponseErrorWithMessage,
 };
