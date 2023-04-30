@@ -1,8 +1,8 @@
+import { PropsWithChildren } from "react";
 import { Spinner } from "../ui";
 
-type Props = {
+type Props = PropsWithChildren & {
   loading: boolean;
-  children: React.ReactNode | React.ReactNode[];
 };
 
 const EpisodesContainer: React.FC<Props> = ({ children, loading }) => {

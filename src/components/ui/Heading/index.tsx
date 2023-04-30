@@ -1,5 +1,6 @@
-type Props = {
-  children: React.ReactNode;
+import { PropsWithChildren } from "react";
+
+type Props = PropsWithChildren & {
   size: 1 | 2 | 3 | 4 | 5 | 6;
 };
 
