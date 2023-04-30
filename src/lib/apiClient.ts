@@ -10,8 +10,8 @@ const fetchPaginatedEpisodes = async (
   perPage: number = 10
 ): Promise<PaginatedEpisodePreviews> => {
   const params = new URLSearchParams({
-    page: encodeURI(String(page || 1)),
-    perPage: encodeURI(String(perPage || 10)),
+    page: String(page || 1),
+    perPage: String(perPage || 10),
   });
 
   const response = await client.get<PaginatedEpisodePreviews>(
